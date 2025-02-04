@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #ffd959;
+}
+
+.grid{
+    margin-top:-20px;
+}
+.nav1{
+    margin-top: 20px;
+}
