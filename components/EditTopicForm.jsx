@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function EditTopicForm({ id, title, description }) {
   const [newTitle, setNewTitle] = useState(title);
@@ -13,7 +13,7 @@ export default function EditTopicForm({ id, title, description }) {
     e.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/topics/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
